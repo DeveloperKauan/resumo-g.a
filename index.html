@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Estudo de Geometria Analítica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX for beautiful math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMea+cHwsHhDxImEkjiC_2GVbeSiDNkG9V2+A/s6MVJH5Gz0G" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-4xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Guia de Estudo de Geometria Analítica</h1>
+            <p class="mt-4 text-lg text-slate-600">O seu guia completo para dominar a matéria e garantir uma nota excelente!</p>
+        </header>
+
+        <main class="space-y-8">
+            <!-- Introduction Section -->
+            <section class="bg-white p-6 rounded-lg shadow-sm">
+                <p class="text-lg leading-relaxed">
+                    E aí, futuro génio da Geometria Analítica! Preparado para dominar esta matéria e tirar uma nota excelente? Vem comigo, que o modo "operação aprovação" está ativado e vamos conquistar a Geometria Analítica juntos! Sem rodeios, apenas o essencial para gabaritares!
+                </p>
+            </section>
+            
+            <!-- Section 1: Distance between Points -->
+            <section id="distancia-pontos" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">1. Distância entre Pontos: Onde a Intuição Geométrica Salva!</h2>
+                <p class="mb-4">Para começar, vamos ao básico: a distância entre dois pontos. Pense nisto como encontrar a hipotenusa de um triângulo retângulo imaginário!</p>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold text-lg">No Plano (2D)</h3>
+                        <p>Dados um ponto \(A(x_0, y_0)\) e um ponto \(B(x_1, y_1)\), a distância entre eles é:</p>
+                        <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                            <span>\( D_{AB} = \sqrt{(x_1 - x_0)^2 + (y_1 - y_0)^2} \)</span>
+                        </div>
+                        <p class="text-sm text-slate-600"><strong>Dica:</strong> É puro Teorema de Pitágoras!</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">No Espaço (3D)</h3>
+                        <p>A mesma lógica, mas com uma dimensão a mais! Se \(A(x_0, y_0, z_0)\) e \(B(x_1, y_1, z_1)\):</p>
+                        <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                            <span>\( D_{AB} = \sqrt{(x_1 - x_0)^2 + (y_1 - y_0)^2 + (z_1 - z_0)^2} \)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 2: Distance between Point and Line (Plane) -->
+            <section id="distancia-ponto-reta-plano" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">2. Distância entre Ponto e Reta no Plano</h2>
+                <p>A distância de um ponto \(P(x_0, y_0)\) a uma reta \(r: Ax + By + C = 0\) é o caminho mais curto, ou seja, a perpendicular.</p>
+                <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                   <span>\( D_{P,r} = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}} \)</span>
+                </div>
+            </section>
+
+            <!-- Section 3: Distance between Point and Line (Space) -->
+            <section id="distancia-ponto-reta-espaco" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">3. Distância entre Ponto e Reta no Espaço</h2>
+                <p>Para um ponto \(P\) e uma reta \(r: X = Q + t \vec{Dr}\), usamos vetores:</p>
+                <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                    <span>\( D_{P,r} = \frac{||\vec{QP} \times \vec{Dr}||}{||\vec{Dr}||} \)</span>
+                </div>
+                 <p class="text-sm text-slate-600 mt-2"><strong>Intuição:</strong> Esta fórmula vem da área de um paralelogramo formado pelos vetores \(\vec{QP}\) e \(\vec{Dr}\).</p>
+            </section>
+
+            <!-- Section 4: Distance between Lines -->
+            <section id="distancia-retas" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">4. Distância entre Retas</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Retas Concorrentes ou Coincidentes:</strong> \(D = 0\).</li>
+                    <li><strong>Retas Paralelas:</strong> Reduz-se ao caso de distância de ponto a reta. Escolha um ponto em uma reta e calcule a distância até a outra.</li>
+                    <li><strong>Retas Reversas:</strong> Para retas \(r\) e \(s\) com pontos \(Q \in r\) e \(P \in s\):
+                        <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                            <span>\( D_{r,s} = \frac{||\vec{QP} \cdot (\vec{Dr} \times \vec{Ds})||}{||\vec{Dr} \times \vec{Ds}||} \)</span>
+                        </div>
+                        <p class="text-sm text-slate-600"><strong>Intuição:</strong> Usa o volume de um paralelepípedo para encontrar a altura (distância).</p>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Section 5: Distance between Point and Plane -->
+            <section id="distancia-ponto-plano" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">5. Distância entre Ponto e Plano</h2>
+                <p>A distância de um ponto \(P(x_0, y_0, z_0)\) a um plano \(\alpha: Ax + By + Cz + D = 0\) é:</p>
+                <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                    <span>\( D_{P,\alpha} = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}} \)</span>
+                </div>
+            </section>
+
+            <!-- Section 6 & 7: Distances between Line/Plane and Plane/Plane -->
+            <section id="outras-distancias" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">6 & 7. Distância entre Reta/Plano e Plano/Plano</h2>
+                <ul class="list-disc list-inside space-y-2">
+                     <li><strong>Se se cruzam ou são coincidentes:</strong> A distância é <strong>zero</strong>.</li>
+                     <li><strong>Se são paralelos:</strong> O problema reduz-se a calcular a <strong>distância de um ponto a um plano</strong>. Basta escolher um ponto qualquer no primeiro objeto (reta ou plano) e calcular a sua distância ao segundo plano.</li>
+                </ul>
+            </section>
+
+            <!-- Section 8, 9, 10: Angles -->
+            <section id="angulos" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">8, 9 & 10. Ângulos</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold text-lg">Ângulo entre Retas</h3>
+                        <p>Usa-se o produto escalar dos vetores diretores (\(\vec{Dr}, \vec{Ds}\)):</p>
+                         <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                           <span>\( \cos(\theta) = \frac{||\vec{Dr} \cdot \vec{Ds}||}{||\vec{Dr}|| \cdot ||\vec{Ds}||} \)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Ângulo entre Reta e Plano</h3>
+                        <p>Usa-se o seno, com o vetor diretor da reta (\(\vec{Dr}\)) e o vetor normal do plano (\(\vec{n}_\alpha\)):</p>
+                         <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                           <span>\( \sin(\theta) = \frac{||\vec{Dr} \cdot \vec{n}_\alpha||}{||\vec{Dr}|| \cdot ||\vec{n}_\alpha||} \)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Ângulo entre Planos</h3>
+                        <p>Usa-se o cosseno dos vetores normais (\(\vec{n}_\alpha, \vec{n}_\beta\)):</p>
+                         <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                           <span>\( \cos(\theta) = \frac{||\vec{n}_\alpha \cdot \vec{n}_\beta||}{||\vec{n}_\alpha|| \cdot ||\vec{n}_\beta||} \)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section 11: Conics -->
+            <section id="conicas" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">11. Equações das Cônicas</h2>
+                 <p class="mb-4">As cônicas são curvas geradas pela interseção de um plano com um cone.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Parábola (\(e=1\))</h3>
+                        <img src="https://placehold.co/400x200/e2e8f0/475569?text=Par%C3%A1bola" alt="Imagem de uma Parábola" class="w-full rounded-md my-2">
+                        <p>\(y = \frac{1}{4p}x^2\)</p>
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Elipse (\(0 < e < 1\))</h3>
+                         <img src="https://placehold.co/400x200/e2e8f0/475569?text=Elipse" alt="Imagem de uma Elipse" class="w-full rounded-md my-2">
+                        <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)</p>
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Circunferência (\(e=0\))</h3>
+                        <img src="https://placehold.co/400x200/e2e8f0/475569?text=Circunfer%C3%AAncia" alt="Imagem de uma Circunferência" class="w-full rounded-md my-2">
+                        <p>\(x^2 + y^2 = R^2\)</p>
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Hipérbole (\(e>1\))</h3>
+                        <img src="https://placehold.co/400x200/e2e8f0/475569?text=Hip%C3%A9rbole" alt="Imagem de uma Hipérbole" class="w-full rounded-md my-2">
+                        <p>\(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)</p>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Section 13: General Equation of Conics -->
+            <section id="eq-geral-conicas" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">13. Equação Geral das Cônicas</h2>
+                <p>A forma geral é \(Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0\). O discriminante \(\Delta = B^2 - 4AC\) identifica a cônica:</p>
+                <ul class="list-disc list-inside space-y-2 mt-4">
+                    <li>Se \(\Delta > 0\): <strong>Hipérbole</strong></li>
+                    <li>Se \(\Delta = 0\): <strong>Parábola</strong></li>
+                    <li>Se \(\Delta < 0\): <strong>Elipse</strong> (ou circunferência)</li>
+                </ul>
+            </section>
+            
+            <!-- Section 16: Quadrics -->
+            <section id="quadricas" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">16. Equações das Quádricas</h2>
+                <p class="mb-4">As quádricas são as versões 3D das cônicas.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Elipsoide</h3>
+                        <img src="https://placehold.co/400x250/e2e8f0/475569?text=Elipsoide" alt="Imagem de um Elipsoide" class="w-full rounded-md my-2">
+                        <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1\)</p>
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Paraboloide Elíptico</h3>
+                        <img src="https://placehold.co/400x250/e2e8f0/475569?text=Paraboloide+El%C3%ADptico" alt="Imagem de um Paraboloide Elíptico" class="w-full rounded-md my-2">
+                        <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = z\)</p>
+                    </div>
+                    <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Hiperboloide de Uma Folha</h3>
+                         <img src="https://placehold.co/400x250/e2e8f0/475569?text=Hiperboloide+de+Uma+Folha" alt="Imagem de um Hiperboloide de Uma Folha" class="w-full rounded-md my-2">
+                        <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1\)</p>
+                    </div>
+                     <div class="border p-4 rounded-md">
+                        <h3 class="font-semibold text-lg">Paraboloide Hiperbólico (Sela)</h3>
+                        <img src="https://placehold.co/400x250/e2e8f0/475569?text=Paraboloide+Hiperb%C3%B3lico" alt="Imagem de um Paraboloide Hiperbólico" class="w-full rounded-md my-2">
+                        <p>\(\frac{x^2}{a^2} - \frac{y^2}{b^2} = z\)</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-slate-200">
+            <p class="text-slate-500">Bons estudos e sucesso na prova!</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // This script will automatically render all mathematical expressions
+        // enclosed in \(...\) for inline math and \[...\] for display math.
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '\\[', right: '\\]', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
+</body>
+</html>
