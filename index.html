@@ -49,7 +49,7 @@
             
             <!-- Section 1: Distance between Points -->
             <section id="distancia-pontos" class="bg-white p-6 rounded-lg shadow-sm">
-                <h2 class="text-2xl font-bold mb-4">1. Distância entre Pontos: Onde a Intuição Geométrica Salva!</h2>
+                <h2 class="text-2xl font-bold mb-4">1. Distância entre Pontos</h2>
                 <p class="mb-4">Para começar, vamos ao básico: a distância entre dois pontos. Pense nisto como encontrar a hipotenusa de um triângulo retângulo imaginário!</p>
                 <div class="space-y-4">
                     <div>
@@ -58,7 +58,6 @@
                         <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
                             <span>\( D_{AB} = \sqrt{(x_1 - x_0)^2 + (y_1 - y_0)^2} \)</span>
                         </div>
-                        <p class="text-sm text-slate-600"><strong>Dica:</strong> É puro Teorema de Pitágoras!</p>
                     </div>
                     <div>
                         <h3 class="font-semibold text-lg">No Espaço (3D)</h3>
@@ -86,7 +85,6 @@
                 <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
                     <span>\( D_{P,r} = \frac{||\vec{QP} \times \vec{Dr}||}{||\vec{Dr}||} \)</span>
                 </div>
-                 <p class="text-sm text-slate-600 mt-2"><strong>Intuição:</strong> Esta fórmula vem da área de um paralelogramo formado pelos vetores \(\vec{QP}\) e \(\vec{Dr}\).</p>
             </section>
 
             <!-- Section 4: Distance between Lines -->
@@ -94,12 +92,11 @@
                 <h2 class="text-2xl font-bold mb-4">4. Distância entre Retas</h2>
                 <ul class="list-disc list-inside space-y-2">
                     <li><strong>Retas Concorrentes ou Coincidentes:</strong> \(D = 0\).</li>
-                    <li><strong>Retas Paralelas:</strong> Reduz-se ao caso de distância de ponto a reta. Escolha um ponto em uma reta e calcule a distância até a outra.</li>
+                    <li><strong>Retas Paralelas:</strong> Reduz-se ao caso de distância de ponto a reta.</li>
                     <li><strong>Retas Reversas:</strong> Para retas \(r\) e \(s\) com pontos \(Q \in r\) e \(P \in s\):
                         <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
-                            <span>\( D_{r,s} = \frac{||\vec{QP} \cdot (\vec{Dr} \times \vec{Ds})||}{||\vec{Dr} \times \vec{Ds}||} \)</span>
+                            <span>\( D_{r,s} = \frac{|\vec{QP} \cdot (\vec{Dr} \times \vec{Ds})|}{||\vec{Dr} \times \vec{Ds}||} \)</span>
                         </div>
-                        <p class="text-sm text-slate-600"><strong>Intuição:</strong> Usa o volume de um paralelepípedo para encontrar a altura (distância).</p>
                     </li>
                 </ul>
             </section>
@@ -118,7 +115,7 @@
                 <h2 class="text-2xl font-bold mb-4">6 & 7. Distância entre Reta/Plano e Plano/Plano</h2>
                 <ul class="list-disc list-inside space-y-2">
                      <li><strong>Se se cruzam ou são coincidentes:</strong> A distância é <strong>zero</strong>.</li>
-                     <li><strong>Se são paralelos:</strong> O problema reduz-se a calcular a <strong>distância de um ponto a um plano</strong>. Basta escolher um ponto qualquer no primeiro objeto (reta ou plano) e calcular a sua distância ao segundo plano.</li>
+                     <li><strong>Se são paralelos:</strong> O problema reduz-se a calcular a <strong>distância de um ponto a um plano</strong>.</li>
                 </ul>
             </section>
 
@@ -128,23 +125,20 @@
                 <div class="space-y-4">
                     <div>
                         <h3 class="font-semibold text-lg">Ângulo entre Retas</h3>
-                        <p>Usa-se o produto escalar dos vetores diretores (\(\vec{Dr}, \vec{Ds}\)):</p>
                          <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
-                           <span>\( \cos(\theta) = \frac{||\vec{Dr} \cdot \vec{Ds}||}{||\vec{Dr}|| \cdot ||\vec{Ds}||} \)</span>
+                           <span>\( \cos(\theta) = \frac{|\vec{Dr} \cdot \vec{Ds}|}{||\vec{Dr}|| \cdot ||\vec{Ds}||} \)</span>
                         </div>
                     </div>
                     <div>
                         <h3 class="font-semibold text-lg">Ângulo entre Reta e Plano</h3>
-                        <p>Usa-se o seno, com o vetor diretor da reta (\(\vec{Dr}\)) e o vetor normal do plano (\(\vec{n}_\alpha\)):</p>
                          <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
-                           <span>\( \sin(\theta) = \frac{||\vec{Dr} \cdot \vec{n}_\alpha||}{||\vec{Dr}|| \cdot ||\vec{n}_\alpha||} \)</span>
+                           <span>\( \sin(\theta) = \frac{|\vec{Dr} \cdot \vec{n}_\alpha|}{||\vec{Dr}|| \cdot ||\vec{n}_\alpha||} \)</span>
                         </div>
                     </div>
                     <div>
                         <h3 class="font-semibold text-lg">Ângulo entre Planos</h3>
-                        <p>Usa-se o cosseno dos vetores normais (\(\vec{n}_\alpha, \vec{n}_\beta\)):</p>
                          <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
-                           <span>\( \cos(\theta) = \frac{||\vec{n}_\alpha \cdot \vec{n}_\beta||}{||\vec{n}_\alpha|| \cdot ||\vec{n}_\beta||} \)</span>
+                           <span>\( \cos(\theta) = \frac{|\vec{n}_\alpha \cdot \vec{n}_\beta|}{||\vec{n}_\alpha|| \cdot ||\vec{n}_\beta||} \)</span>
                         </div>
                     </div>
                 </div>
@@ -157,23 +151,48 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Parábola (\(e=1\))</h3>
-                        <img src="https://placehold.co/400x200/e2e8f0/475569?text=Par%C3%A1bola" alt="Imagem de uma Parábola" class="w-full rounded-md my-2">
                         <p>\(y = \frac{1}{4p}x^2\)</p>
                     </div>
                     <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Elipse (\(0 < e < 1\))</h3>
-                         <img src="https://placehold.co/400x200/e2e8f0/475569?text=Elipse" alt="Imagem de uma Elipse" class="w-full rounded-md my-2">
                         <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)</p>
                     </div>
                     <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Circunferência (\(e=0\))</h3>
-                        <img src="https://placehold.co/400x200/e2e8f0/475569?text=Circunfer%C3%AAncia" alt="Imagem de uma Circunferência" class="w-full rounded-md my-2">
                         <p>\(x^2 + y^2 = R^2\)</p>
                     </div>
                     <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Hipérbole (\(e>1\))</h3>
-                        <img src="https://placehold.co/400x200/e2e8f0/475569?text=Hip%C3%A9rbole" alt="Imagem de uma Hipérbole" class="w-full rounded-md my-2">
                         <p>\(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)</p>
+                    </div>
+                </div>
+            </section>
+            
+             <!-- Section 12: Coordinate Transformations -->
+            <section id="transformacoes-coordenadas" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">12. Transformações de Coordenadas: Simplificando a Vida</h2>
+                <p>Às vezes, a equação de uma cônica está toda desorganizada. Translação e rotação de eixos são os seus superpoderes para a simplificar!</p>
+                <div class="space-y-6 mt-4">
+                    <div>
+                        <h3 class="font-semibold text-lg">Translação de Eixos</h3>
+                        <p>Move a origem para um novo ponto \(O'=(h,k)\) para simplificar a equação. As fórmulas de transformação são:</p>
+                        <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                            <span>\( x = x' + h \quad \text{e} \quad y = y' + k \)</span>
+                        </div>
+                        <p class="text-sm text-slate-600"><strong>Como encontrar a nova origem?</strong> A técnica de <a href="#" class="text-blue-600 hover:underline">completar quadrados</a> na equação geral da cônica revela as coordenadas \((h,k)\) do novo centro.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Rotação de Eixos</h3>
+                        <p>Gira os eixos por um ângulo \(\alpha\) para alinhar a cônica com os novos eixos, eliminando o termo cruzado \(Bxy\).</p>
+                        <p class="mt-2"><strong>Utilidade:</strong> A fórmula abaixo encontra o ângulo \(\alpha\) necessário para eliminar o termo \(Bxy\) da equação geral da cônica, simplificando-a para uma forma padrão.</p>
+                         <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                            <span>\( \tan(2\alpha) = \frac{B}{A-C} \quad (\text{se } A \neq C) \)</span>
+                        </div>
+                        <p>As fórmulas para mudar do sistema rotacionado (\(x', y'\)) para o original (\(x, y\)) são:</p>
+                        <div class="bg-slate-100 p-4 rounded-md my-2 text-center">
+                             <p>\(x = x'\cos(\alpha) - y'\sin(\alpha)\)</p>
+                             <p>\(y = x'\sin(\alpha) + y'\cos(\alpha)\)</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -196,23 +215,55 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Elipsoide</h3>
-                        <img src="https://placehold.co/400x250/e2e8f0/475569?text=Elipsoide" alt="Imagem de um Elipsoide" class="w-full rounded-md my-2">
                         <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1\)</p>
                     </div>
                     <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Paraboloide Elíptico</h3>
-                        <img src="https://placehold.co/400x250/e2e8f0/475569?text=Paraboloide+El%C3%ADptico" alt="Imagem de um Paraboloide Elíptico" class="w-full rounded-md my-2">
                         <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = z\)</p>
                     </div>
                     <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Hiperboloide de Uma Folha</h3>
-                         <img src="https://placehold.co/400x250/e2e8f0/475569?text=Hiperboloide+de+Uma+Folha" alt="Imagem de um Hiperboloide de Uma Folha" class="w-full rounded-md my-2">
                         <p>\(\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1\)</p>
                     </div>
                      <div class="border p-4 rounded-md">
                         <h3 class="font-semibold text-lg">Paraboloide Hiperbólico (Sela)</h3>
-                        <img src="https://placehold.co/400x250/e2e8f0/475569?text=Paraboloide+Hiperb%C3%B3lico" alt="Imagem de um Paraboloide Hiperbólico" class="w-full rounded-md my-2">
                         <p>\(\frac{x^2}{a^2} - \frac{y^2}{b^2} = z\)</p>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Section 19: Bonus -->
+            <section id="lugar-geometrico" class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">19. Bónus: Resolvendo Problemas de Lugar Geométrico</h2>
+                <p class="mb-4">"Lugar geométrico" é apenas uma forma elegante de dizer "o conjunto de todos os pontos que satisfazem uma certa condição geométrica". A chave é traduzir a condição para uma equação.</p>
+                
+                <h3 class="font-semibold text-lg mt-6 mb-2">Exemplo Prático:</h3>
+                <p class="italic mb-2">"Obtenha uma equação do lugar geométrico dos pontos de \(E^3\) que equidistam do ponto \(F=(0, 0, 1/4)\) e da reta \(r: X = (0, 0, -1/4) + \lambda(0, 1, 0)\). Descreva e faça o esboço do lugar geométrico."</p>
+                
+                <div class="space-y-4">
+                    <p><strong>1. Traduzir a condição:</strong> A condição é \(d(P, F) = d(P, r)\), onde \(P=(x,y,z)\) é um ponto genérico do lugar geométrico.</p>
+
+                    <p><strong>2. Calcular as distâncias:</strong></p>
+                    <ul class="list-disc list-inside space-y-2 pl-4">
+                        <li><strong>Distância Ponto-Ponto \(d(P,F)\):</strong>
+                            <div class="bg-slate-100 p-2 rounded-md my-2"><span>\( d(P,F)^2 = (x-0)^2 + (y-0)^2 + (z - 1/4)^2 = x^2 + y^2 + (z - 1/4)^2 \)</span></div>
+                        </li>
+                        <li><strong>Distância Ponto-Reta \(d(P,r)\):</strong> A reta \(r\) é uma reta paralela ao eixo \(y\), que passa por \((0,0,-1/4)\). A distância de um ponto \(P(x,y,z)\) a esta reta é a distância a um ponto em \(r\) com a mesma coordenada \(y\), que é \(Q(0, y, -1/4)\).
+                           <div class="bg-slate-100 p-2 rounded-md my-2"><span>\( d(P,r)^2 = (x-0)^2 + (y-y)^2 + (z - (-1/4))^2 = x^2 + (z + 1/4)^2 \)</span></div>
+                        </li>
+                    </ul>
+
+                    <p><strong>3. Igualar e simplificar:</strong> Agora, igualamos os quadrados das distâncias para eliminar as raízes quadradas:</p>
+                     <div class="bg-slate-100 p-4 rounded-md my-2 leading-loose">
+                        <span>\( x^2 + y^2 + (z - 1/4)^2 = x^2 + (z + 1/4)^2 \)</span>
+                        <span>\( \cancel{x^2} + y^2 + \cancel{z^2} - \frac{1}{2}z + \cancel{\frac{1}{16}} = \cancel{x^2} + \cancel{z^2} + \frac{1}{2}z + \cancel{\frac{1}{16}} \)</span>
+                        <span>\( y^2 = \frac{1}{2}z + \frac{1}{2}z \)</span>
+                        <span class="font-bold text-lg block mt-2">\( y^2 = z \)</span>
+                    </div>
+
+                    <p><strong>4. Descrever e Esboçar:</strong> A equação \(y^2 = z\) não depende de \(x\). Isso significa que para qualquer valor de \(x\), a secção transversal é a parábola \(y^2=z\) no plano YZ. Portanto, o lugar geométrico é um <strong>cilindro parabólico</strong> com diretriz paralela ao eixo \(x\).</p>
+                    <div class="text-center">
+                       <img src="https://placehold.co/500x300/e2e8f0/475569?text=Esbo%C3%A7o+de+um+Cilindro+Parab%C3%B3lico" alt="Esboço de um cilindro parabólico" class="w-full max-w-sm rounded-md my-2 inline-block">
                     </div>
                 </div>
             </section>
@@ -225,18 +276,18 @@
     </div>
 
     <script>
-        // This script will automatically render all mathematical expressions
-        // enclosed in \(...\) for inline math and \[...\] for display math.
         document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-                delimiters: [
-                    {left: '$$', right: '$$', display: true},
-                    {left: '\\[', right: '\\]', display: true},
-                    {left: '$', right: '$', display: false},
-                    {left: '\\(', right: '\\)', display: false}
-                ],
-                throwOnError : false
-            });
+            if (typeof renderMathInElement === 'function') {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '\\[', right: '\\]', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false}
+                    ],
+                    throwOnError : false
+                });
+            }
         });
     </script>
 </body>
